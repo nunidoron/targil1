@@ -8,7 +8,12 @@ pipeline {
                 sh 'echo hi'
             }
         }
-
+        stage('Hello again') {
+            steps {
+                echo 'Hello World'
+                sh 'echo hi'
+            }
+        }
         stage('build docker image') {
             parallel {
                 stage('firstBranch') {
