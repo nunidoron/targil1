@@ -5,8 +5,10 @@ pipeline {
     stages {
         stage('Hello') {
             steps {
-                if (params.Deploy == "Yes"){
-                    echo 'Hello World'
+                script{
+                    if (params.Deploy == "Yes"){
+                        echo 'Hello World'
+                    }
                 }
                 sh 'echo hi'
             }
