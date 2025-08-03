@@ -16,6 +16,7 @@ pipeline {
         stage('Hello again') {
             steps {
                 echo 'Hello World'
+                input message: 'where to deploy', parameters: [choice(choices: ['Prod', 'Dev', 'test'], name: 'where')]
                 sh 'echo hi'
             }
         }
