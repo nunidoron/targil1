@@ -1,11 +1,11 @@
-properties([parameters([choice(choices: ['Yes', 'No', 'Maybe', 'Sure'], description: 'Please choose your deploy something', name: 'Deploy?')])])
+properties([parameters([choice(choices: ['Yes', 'No', 'Maybe', 'Sure'], description: 'Please choose your deploy something', name: 'Deploy')])])
 pipeline {
     agent any
 
     stages {
         stage('Hello') {
             steps {
-                if(Deploy? == "Yes"){
+                if(Deploy == "Yes"){
                     echo 'Hello World'
                 }
                 sh 'echo hi'
