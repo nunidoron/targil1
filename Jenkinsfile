@@ -5,7 +5,9 @@ pipeline {
     stages {
         stage('Hello') {
             steps {
-                echo 'Hello World'
+                if(Deploy? == "Yes"){
+                    echo 'Hello World'
+                }
                 sh 'echo hi'
             }
         }
